@@ -1,0 +1,20 @@
+{
+    "name": "iutbay/yii2-phpexcel",
+    "description": "mPDF response formatter for Yii2",
+    "keywords": ["yii2", "extension", "phpexcel", "excel"],
+    "homepage": "https://github.com/iutbay/yii2-phpexcel",
+    "type": "yii2-extension",
+    "authors": [
+        {
+            "name": "Kevin LEVRON",
+            "email": "kevin.levron@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "phpoffice/phpexcel ": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {"iutbay\\yii2phpexcel\\": ""}
+    }
+}
