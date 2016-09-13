@@ -12,7 +12,7 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "phpoffice/phpexcel ": "^1.8"
+        "phpoffice/phpexcel": "^1.8"
     },
     "autoload": {
         "psr-4": {"iutbay\\yii2phpexcel\\": ""}
