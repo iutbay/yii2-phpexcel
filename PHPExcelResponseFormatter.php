@@ -36,15 +36,15 @@ class PHPExcelResponseFormatter extends Component implements ResponseFormatterIn
     public function formatXLS($response)
     {
         $phpexcel = new \PHPExcel();
-		$phpexcel->setActiveSheetIndex(0);
+        $phpexcel->setActiveSheetIndex(0);
 
         $phpexcel->getActiveSheet()->fromArray($response->data['data']);
-        $filename = ArrayHelper::getValue($response->data, 'filename', 'data').'.xlsx';
+        $filename = ArrayHelper::getValue($response->data, 'filename', 'data') . '.xlsx';
 
         $writer = new \PHPExcel_Writer_Excel2007($phpexcel);
-		header('Content-type: application/vnd.ms-excel');
-		header('Content-Disposition: attachment; filename="'.$filename.'"');
-		$writer->save('php://output');
+        header('Content-type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment; filename="' . $filename . '"');
+        $writer->save('php://output');
     }
 
     /**
