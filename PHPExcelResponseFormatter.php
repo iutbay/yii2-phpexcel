@@ -42,7 +42,7 @@ class PHPExcelResponseFormatter extends Component implements ResponseFormatterIn
         $filename = ArrayHelper::getValue($response->data, 'filename', 'data') . '.xlsx';
 
         $writer = new \PHPExcel_Writer_Excel2007($phpexcel);
-        header('Content-type: application/vnd.ms-excel');
+        header('Content-type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         header('Content-Disposition: attachment; filename="' . $filename . '"');
         $writer->save('php://output');
     }
